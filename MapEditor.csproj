@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>net8.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
-    <ApplicationIcon>passionflower.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\passionflower.ico</ApplicationIcon>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <UseWindowsForms>true</UseWindowsForms>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
@@ -18,58 +18,19 @@
     <DebugType>embedded</DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="MapEditor\bin\**" />
-    <Compile Remove="MapEditor\obj\**" />
-    <EmbeddedResource Remove="MapEditor\bin\**" />
-    <EmbeddedResource Remove="MapEditor\obj\**" />
-    <None Remove="MapEditor\bin\**" />
-    <None Remove="MapEditor\obj\**" />
+    <Content Include="Resources\passionflower.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="passionflower.ico" />
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Remove="MapEditor\Backup\Compression.cs" />
-    <Compile Remove="MapEditor\Backup\DAGraphics.cs" />
-    <Compile Remove="MapEditor\Backup\DAT.cs" />
-    <Compile Remove="MapEditor\Backup\EPF.cs" />
-    <Compile Remove="MapEditor\Backup\Form1.cs" />
-    <Compile Remove="MapEditor\Backup\Form1.Designer.cs" />
-    <Compile Remove="MapEditor\Backup\HPF.cs" />
-    <Compile Remove="MapEditor\Backup\MAP.cs" />
-    <Compile Remove="MapEditor\Backup\MPF.cs" />
-    <Compile Remove="MapEditor\Backup\NewMap.cs" />
-    <Compile Remove="MapEditor\Backup\NewMap.Designer.cs" />
-    <Compile Remove="MapEditor\Backup\Palette.cs" />
-    <Compile Remove="MapEditor\Backup\Program.cs" />
-    <Compile Remove="MapEditor\Backup\Properties\AssemblyInfo.cs" />
-    <Compile Remove="MapEditor\Backup\Properties\Resources.Designer.cs" />
-    <Compile Remove="MapEditor\Backup\Properties\Settings.Designer.cs" />
-    <Compile Remove="MapEditor\Backup\Tileset.cs" />
-    <Compile Remove="MapEditor\Backup\UndoItem.cs" />
-    <Compile Remove="MapEditor\Compression.cs" />
-    <Compile Remove="MapEditor\DAGraphics.cs" />
-    <Compile Remove="MapEditor\DAT.cs" />
-    <Compile Remove="MapEditor\EPF.cs" />
-    <Compile Remove="MapEditor\Form1.cs" />
-    <Compile Remove="MapEditor\Form1.Designer.cs" />
-    <Compile Remove="MapEditor\HPF.cs" />
-    <Compile Remove="MapEditor\MAP.cs" />
-    <Compile Remove="MapEditor\MPF.cs" />
-    <Compile Remove="MapEditor\NewMap.cs" />
-    <Compile Remove="MapEditor\NewMap.Designer.cs" />
-    <Compile Remove="MapEditor\Palette.cs" />
-    <Compile Remove="MapEditor\Program.cs" />
-    <Compile Remove="MapEditor\Properties\AssemblyInfo.cs" />
-    <Compile Remove="MapEditor\Properties\Resources.Designer.cs" />
-    <Compile Remove="MapEditor\Properties\Settings.Designer.cs" />
-    <Compile Remove="MapEditor\Tileset.cs" />
-    <Compile Remove="MapEditor\UndoItem.cs" />
-    <EmbeddedResource Remove="MapEditor\Backup\Form1.resx" />
-    <EmbeddedResource Remove="MapEditor\Backup\NewMap.resx" />
-    <EmbeddedResource Remove="MapEditor\Backup\Properties\Resources.resx" />
-    <EmbeddedResource Remove="MapEditor\Form1.resx" />
-    <EmbeddedResource Remove="MapEditor\NewMap.resx" />
-    <EmbeddedResource Remove="MapEditor\Properties\Resources.resx" />
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 </Project>

@@ -21,6 +21,9 @@
     <Content Include="Resources\passionflower.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\dalib\DALib\DALib.csproj" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Update="Properties\Settings.Designer.cs">
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>
